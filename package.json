@@ -26,6 +26,8 @@
     "format:w": "yarn format --write",
     "dev": "lerna run dev --stream --parallel",
     "build": "lerna run build --stream --parallel",
+    "build:api": "lerna run build --stream --scope=@communitii/api",
+    "build:web": "lerna run build --stream --scope=@communitii/web",
     "start:api": "lerna run start --stream --scope=@communitii/api",
     "start:web": "lerna run start --stream --scope=@communitii/web"
   }

@@ -11,6 +11,6 @@ COPY packages /usr/workspace/communiTii/packages
 
 RUN yarn
 RUN yarn bootstrap
-RUN yarn build
+RUN yarn build:api
 
 CMD [ "yarn", "start:api" ]
