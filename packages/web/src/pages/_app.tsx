@@ -3,7 +3,6 @@ import App from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import { ApolloProvider } from '@apollo/react-hooks'
 import {
   ApolloClient,
   NormalizedCacheObject
@@ -27,11 +26,7 @@ export default class AppEntry extends App<Props> {
   }
 
   render(): JSX.Element {
-    const {
-      Component,
-      pageProps,
-      apolloClient
-    } = this.props
+    const { Component, pageProps } = this.props
 
     return (
       <>
@@ -40,9 +35,7 @@ export default class AppEntry extends App<Props> {
         </Head>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <ApolloProvider client={apolloClient}>
-            <Component {...pageProps} />
-          </ApolloProvider>
+          <Component {...pageProps} />
         </ThemeProvider>
       </>
     )
