@@ -24,6 +24,9 @@
     "lint": "eslint 'packages/**/*.ts?(x)'",
     "format": "prettier-eslint 'packages/**/*.ts?(x)'",
     "format:w": "yarn format --write",
-    "dev": "lerna run dev --stream --parallel"
+    "dev": "lerna run dev --stream --parallel",
+    "build": "lerna run build --stream --parallel",
+    "start:api": "lerna run start --stream --scope=@communitii/api",
+    "start:web": "lerna run start --stream --scope=@communitii/web"
   }
 }
